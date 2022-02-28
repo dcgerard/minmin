@@ -1,0 +1,9 @@
+#BSUB -J install_r_pkgs
+#BSUB -q normal
+#BSUB -o install_out.txt
+#BSUB -e install_err.txt
+#BSUB -u "username@american.edu"
+#BSUB -B
+#BSUB -N
+#BSUB n=1
+/app/R-4.0.2/bin/R CMD BATCH --no-save --no-restore install.R install.Rout

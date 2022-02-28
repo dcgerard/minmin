@@ -1,0 +1,9 @@
+#BSUB -J minimal_example
+#BSUB -q normal
+#BSUB -o minimal_out.txt
+#BSUB -e minimal_err.txt
+#BSUB -u "username@american.edu"
+#BSUB -B
+#BSUB -N
+#BSUB n=2
+/app/R-4.0.2/bin/R CMD BATCH --no-save --no-restore '--args nc=2' minimal.R minimal.Rout
